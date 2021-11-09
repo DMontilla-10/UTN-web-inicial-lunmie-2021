@@ -9,8 +9,10 @@ const { getAllProducts, getProductsById } = require('../controllers/productsCont
 
 const productsRoutes = express.Router()
 
-productsRoutes.get("/", getAllProducts)
+// productsRoutes.get("/", getAllProducts)
 
 productsRoutes.get('/unProducto', getProductsById)
+
+productsRoutes.get('/allProducts', getAllProducts)
 
 module.exports = productsRoutes
