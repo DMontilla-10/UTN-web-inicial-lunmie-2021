@@ -4,8 +4,6 @@ const databaseConnection = mysql2.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'WebLunMie',
-    password: 'root',
-    port: 8889
 })
 
 databaseConnection.connect((error)=>{
