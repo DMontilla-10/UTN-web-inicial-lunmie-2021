@@ -9,12 +9,14 @@ const { getAllProducts, getProductsById ,getForm,addNewProduct} = require('../co
 
 const productsRoutes = express.Router()
 
-//productsRoutes.get("/", getAllProducts)
+// productsRoutes.get("/", getAllProducts)
 
 productsRoutes.get('/unProducto', getProductsById)
 productsRoutes.get("/allProducts", getAllProducts)
 productsRoutes.get('/addProduct', getForm)
 
 productsRoutes.post("/addProduct", addNewProduct)
+
+productsRoutes.get('/allProducts', getAllProducts)
 
 module.exports = productsRoutes
