@@ -30,8 +30,8 @@ const getForm = (req, res) =>{
 
 const addNewProduct =(req,res)=>{
     const {name,category,price,description,stock }= req.body
-
-    databaseConnection.query("INSERT INTO products (name,category,price,description ,stock)VALUES(?,?,?,?,?) ",[name,category,parseFloat(price),description,parseInt(stock)],(error,data)=>{
+   
+  databaseConnection.query("INSERT INTO products (name,category,price,description ,stock)VALUES(?,?,?,?,?) ",[name,category,parseFloat(price),description,parseInt(stock)],(error,data)=>{
         if(error){
             console.log(error)
         }else{
@@ -40,6 +40,7 @@ const addNewProduct =(req,res)=>{
             res.render("pages/index")
         }
     })
+   
 };
 
 module.exports = {getAllProducts, getProductsById, getForm,addNewProduct,getHomePage}
